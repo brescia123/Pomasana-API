@@ -1,0 +1,106 @@
+% !TEX root = ../main.tex
+%%--------------------------------------------------------------------------
+%% REQUIREMENTS
+%%--------------------------------------------------------------------------
+
+
+
+\chapter{Requirements Analysis}
+
+	\section{Functional Requirements}
+	In this section, based on the goals described in the section \ref{goals} I will identify the functional requirements of the APIs of Pomasana; they will coincide mainly with the requirements of an application based on them because all the functionalities will be exposed to the public.
+
+
+	\begin{description}
+
+		\item[Register and login to the service]\hfill
+			
+			\begin{itemize}
+
+				\item Provide a registration functionality integrated with the Asana one.
+
+				\item Provide a login functionality always with Asana login.
+
+			\end{itemize}
+
+		\item[Edit his personal informations]\hfill
+
+			\begin{itemize}
+
+				\item Provide a functionality that allows the user to modify the personal informations.
+
+			\end{itemize}
+
+		\item[Create a PomoTask, automatically added also to Asana workspace]\hfill
+
+			\begin{itemize}
+
+				\item Provide a way to create a new PomoTask.
+
+				\item When a new PomoTask is created it is automatically created also in the Asana user account.
+
+			\end{itemize}
+
+		\item[Modify or delete a PomoTask, synchronized with the corresponding Asana task]\hfill
+
+			\begin{itemize}
+
+				\item Provide a function to make an estimate of required Pomodori on a particular PomoTask.
+
+				\item Let the user mark the PomoTask as completed, synchronizing its state with Asana.
+
+				\item Allow to delete a PomoTask, also deleting the corresponding Asana task.
+
+			\end{itemize}
+
+		\item[`Complete'' a Pomodoro and add it to a PomoTask]\hfill
+
+			\begin{itemize}
+
+				\item Provide a way to ``complete'' a pomodoro, adding it to a PomoTask.
+
+			\end{itemize}
+
+		\item[Mark a Pomodoro with interruptions and add notes to it]\hfill
+
+			\begin{itemize}
+
+				\item For every Pomodoro added to a PomoTask make it possible to add the count of internal and external interruptions.
+
+				\item Make it possible to add Notes to a Pomodoro.
+
+			\end{itemize}
+
+		\item[Send a daily report to an email]\hfill
+
+			\begin{itemize}
+
+				\item Let the user choose to send a daily report of the completed PomoTask and the Pomodoro used to an email.
+
+			\end{itemize}
+
+
+	\end{description}
+
+	\section{Non-Functional Requirements}
+
+	In this section will be described some requirements that are not related with functionalities of the system that is going to be developed. They are independent from the application domain but they are relevant for design of the system.\\
+
+		\subsection{System Architecture}
+		The nature of the project imposes that the service is available through the Internet, making possible for every application all around the world to access the API with simple Http request like GET and POST. So it's fundamental that system is available twenty-four hours a day, with a stable connection and appropriate band; they are also important requirements like reliability and scalability.\\
+		To achieve that it was decided to rely on Google infrastructure exploiting its PaaS Google App Engine (more on this topic in chapter \ref{architectural_design}).
+
+
+	\section{Specifications}
+
+	In this section are listed some specifications and assumptions needed to meet the requirements of the system:
+
+		\begin{itemize}
+
+			\item An user that is going to register to Pomasana must already be registered to Asana, otherwise there is no possibility to exploit the functionalities of the system.
+
+			\item add more...
+
+
+		\end{itemize}
+

@@ -1,0 +1,143 @@
+% !TEX root = ../main.tex
+%%--------------------------------------------------------------------------
+%% INTRODUCTION
+%%--------------------------------------------------------------------------
+
+
+
+\chapter{Introduction}
+
+
+
+	\section{Purpose}
+	The purpose of this document is to illustrate the process followed during the development of the software, from the analysis of requirements to the system design.\\
+	This project is developed in the context of the course Service Technologies 1 of Politecnico of Milan. The goal to achieve is to find public web services and integrate them to create a new service that adds value and functionality to the existing. 
+
+
+
+
+	\section{Description}
+	The system that is going to be developed is named Pomasana, from the mix of the words "Pomodoro" and "Asana".
+	The idea is to integrate the “The Pomodoro Technique®” and Asana. To better clarify what is Pomasana is necessary to explain more in details “The Pomodoro Technique®” and list some of the main functionalities of Asana:\\
+
+		\begin{itemize}
+
+				\item “The Pomodoro Technique®” is a way of managing time and becoming more productive by managing tasks in 25 minute intervals followed by a short break of 5 minutes.	Here are the steps:
+
+					\begin{enumerate}
+
+						\item Identify the task
+
+						\item Set a timer to 25 minutes (a Pomodoro)
+
+						\item Focus on work until the Pomodoro ends
+
+						\item Take a 5 minutes break
+
+						\item every four Pomodoro take a longer break (15-30 minutes)
+
+					\end{enumerate}
+
+				The technique includes other aspects such as internal/external interruptions and planning. For more details refer to the section \ref{references}. 
+				
+				\item Asana is an online project management tool, with the possibility to define workspaces, set tasks and organize them in projects, assign tasks to people, define deadlines and many other features. 
+				For Pomasana is fundamental that it exposes a set of public API that allows to access much of the data in the system.
+
+		\end{itemize}
+
+		Pomasana is going to integrate the main functionalities of Asana with the concept described by “The Pomodoro Technique®” offering an easy way to extract the best from the two services.
+
+
+
+\section{Glossary}
+Below are some terms that are useful to understand this document:
+
+	\subsection{Pomodoro Technique Terms}
+
+		\begin{description}
+
+			\item [Pomodoro] \hfill \\
+			A single unit of time, composed by 25 minutes of work and 5 minutes of break: it is the base concept of “The Pomodoro Technique®”.
+
+			\item [Interruptions] \hfill \\
+			In the context of “The Pomodoro Technique®” can occur in the middle of a Pomodoro and can be both internal and external.
+
+			\item [Unplanned activity] \hfill \\
+			An activity that is created in the middle of a Pomodoro following an Interruption.
+
+			\item [Todo Today Sheet] \hfill \\
+			List of activities planned for the current day of work.
+
+			\item [Activity Inventory sheet] \hfill \\
+			List from which to choose a subset of activities to be moved into the Todo Today Sheet.
+
+		\end{description}
+
+	\subsection{Asana Terms}
+
+		\begin{description}
+
+			\item [Asana Task] \hfill \\
+			A task that exist on the Asana system.
+
+			\item [Asana Project] \hfill \\
+			Container for multiple tasks.
+
+			\item [Asana Workspace] \hfill \\
+			A collection of people and the projects and tasks they work on together.
+
+		\end{description}
+
+
+	\subsection{Pomasana Terms}
+		\begin{description}
+
+			\item [PomoTask] \hfill \\
+			An Asana Task enriched with some element derived from “The Pomodoro Technique®”.
+
+		\end{description}
+
+
+	\section{Goals}
+	\label{goals}
+	The main goal of this project is to create a web service composed by a set of API that allows other developers to exploit it and produce web application or application for mobile phones.\\
+	However I'll develop a simple application (web or android) with the only purpose of show the functionalities of the service.\\
+	To clarify the goals of the project is useful to list the possibilities that a user of a final application, exploiting the Pomasana API, will have:
+
+	\begin{itemize}
+
+		\item Register and login to the service.
+
+		\item Edit his personal informations.
+
+		\item Create a PomoTask that will be automatically added also to his Asana workspace.
+
+		\item Modify or delete a PomoTask that will be synchronized with the corresponding Asana task.
+
+		\item ``Complete'' a Pomodoro and add it to a PomoTask.
+
+		\item Mark a Pomodoro with interruptions and add notes to it.
+
+		\item Send a daily report to an email.
+
+	\end{itemize}
+
+
+
+	\section{References}
+	\label{references}
+		In this section can be found some useful references for a more complete understanding of this document and the project in general.
+
+		\begin{description}
+
+		\item[\href{https://asana.com}{asana.com}] \hfill \\
+		The Asana homepage.
+
+		\item[\href{http://developers.asana.com/documentation/}{developers.asana.com/documentation}] \hfill \\
+		The Asana Api Documentation.
+
+		\item[\href{http://pomodorotechnique.com}{pomodorotechnique.com}] \hfill \\
+		“The Pomodoro Technique®” homepage.
+
+		\end{description}
+

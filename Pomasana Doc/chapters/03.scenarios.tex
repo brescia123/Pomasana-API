@@ -1,0 +1,193 @@
+% !TEX root = ../main.tex
+%%--------------------------------------------------------------------------
+%% SCENARIOS
+%%--------------------------------------------------------------------------
+
+
+
+\chapter{Use Cases}
+
+This chapter is dedicated to explain the main use cases that can occur when using an application (in this case a web application) that takes advantage of the Pomasana API. Again, despite the following scenarios and use cases describe the interaction with an application and not directly with the system that is going to be developed, it is correct to assume that they reflect how the API are used; in fact all the functionalities of Pomasana are entirely exploitable through its API.
+
+	\section{Actors}
+	The only two possible type of actors are:
+		
+		\begin{description}
+
+			\item[Unregistered User] He can only access the application Home Page and eventually register to Pomasana.
+
+			\item[Registered User] He can exploit all the Pomasana functionalities.
+
+		\end{description}
+
+	\section{Use Cases}
+
+		\subsection{Registration}
+
+			\begin{description}
+
+				\item[Actor] Unregistered User
+			
+				\item[Entry condition] None
+
+				\item[Event Flow]\hfill
+
+					\begin{itemize}
+
+						\item The user opens the Home Page of Pomasana.
+
+						\item The user is redirected to an Asana page that ask for permission.
+
+						\item The system add the new user to the database.
+
+						\item The system sends a confirmation email.
+
+					\end{itemize}
+
+				\item[Exceptions] If the user is not registered to Asana he is redirected to the Asana registration page.
+
+				\item[Consequences] The user is registered to Pomasana and ready to use the system.
+
+			\end{description}
+
+		\subsection{Login}
+
+			\begin{description}
+
+				\item[Actor] Registered User
+			
+				\item[Entry condition] The user must be registered to Pomasana.
+
+				\item[Event Flow]\hfill
+
+					\begin{itemize}
+
+						\item The user performs a login request on the Home Page.
+
+						\item See how Asana OAuth works....
+
+						\item ...
+
+						\item The user is redirected on his personal page.
+
+					\end{itemize}
+
+				\item[Exceptions] ...
+
+				\item[Consequences] The user is now logged into the system and can use all its functionalities.
+
+			\end{description}
+
+		\subsection{Profile editing}
+
+			\begin{description}
+
+				\item[Actor] Registered User
+			
+				\item[Entry condition] The user must be logged into the system.
+
+				\item[Event Flow]\hfill
+
+					\begin{itemize}
+
+						\item The user access his personal page.
+
+						\item He modify the personal info and confirm.
+
+						\item The system update the database with the new data.
+
+					\end{itemize}
+
+				\item[Exceptions] The new data are not complete and the system notify the error.
+
+				\item[Consequences] The personal infos of the user are changed.
+
+			\end{description}
+
+		\subsection{PomoTask creation}
+
+			\begin{description}
+
+				\item[Actor] Registered User
+			
+				\item[Entry condition] The user must be logged into the system.
+
+				\item[Event Flow]\hfill
+
+					\begin{itemize}
+
+						\item
+
+					\end{itemize}
+
+				\item[Exceptions]
+
+				\item[Consequences]
+
+			\end{description}
+
+		\subsection{PomoTask editing}
+
+			\begin{description}
+
+				\item[Actor] Registered User
+			
+				\item[Entry condition] The user must be logged into the system.
+
+				\item[Event Flow]\hfill
+
+					\begin{itemize}
+
+						\item
+
+					\end{itemize}
+
+				\item[Exceptions]
+
+				\item[Consequences]
+
+			\end{description}
+
+		\subsection{Pomodoro creation}
+
+			\begin{description}
+
+				\item[Actor] Registered User
+			
+				\item[Entry condition] The user must be logged into the system.
+
+				\item[Event Flow]\hfill
+
+					\begin{itemize}
+
+						\item
+
+					\end{itemize}
+
+				\item[Exceptions]
+
+				\item[Consequences]
+
+			\end{description}
+
+		\subsection{Sending report}
+
+			\begin{description}
+
+				\item[Actor] Registered User
+			
+				\item[Entry condition] The user must be logged into the system.
+
+				\item[Event Flow]\hfill
+
+					\begin{itemize}
+
+						\item
+
+					\end{itemize}
+
+				\item[Exceptions]
+
+				\item[Consequences]
+
+			\end{description}
