@@ -139,7 +139,7 @@ public class PomoTaskProvider {
 
         for (PomoTask pomoTask : pomoTaskList) {
 
-            pomoTask = AsanaApiClient.build(authUser).syncWithAsana(pomoTask);
+            //pomoTask = AsanaApiClient.build(authUser).syncWithAsana(pomoTask);
 
             if (completed != null) {
                 if (pomoTask.isCompleted() == completed) {

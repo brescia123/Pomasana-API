@@ -52,7 +52,7 @@ public class AsanaTaskProvider {
 
 
     @GET
-    @Path("/projects/{id}/tasks")
+    @Path("/projects/{id}")
     @Produces("application/json")
     public Response getProjectTasks(@Context HttpHeaders hh,
             @PathParam("id") String workspaceIdString) {

@@ -64,15 +64,13 @@ This chapter is dedicated to explain the main use cases that can occur when usin
 
 						\item The user performs a login request on the Home Page.
 
-						\item See how Asana OAuth works....
+						\item The system authenticates the user. 
 
-						\item ...
-
-						\item The user is redirected on his personal page.
+						\item The user is redirected on the Todo Today page.
 
 					\end{itemize}
 
-				\item[Exceptions] ...
+				\item[Exceptions] If the user is not registered to Asana he is redirected to the Pomasana registration page.
 
 				\item[Consequences] The user is now logged into the system and can use all its functionalities.
 
@@ -104,7 +102,7 @@ This chapter is dedicated to explain the main use cases that can occur when usin
 
 			\end{description}
 
-		\subsection{PomoTask creation}
+		\subsection{Pomotask creation}
 
 			\begin{description}
 
@@ -116,17 +114,21 @@ This chapter is dedicated to explain the main use cases that can occur when usin
 
 					\begin{itemize}
 
-						\item
+						\item The user chooses an Asana project from a list.
+
+						\item He select one task from the choosen project.
+
+						\item The system updates the database with the new Pomotask data.
 
 					\end{itemize}
 
-				\item[Exceptions]
+				\item[Exceptions] The new data are not complete or correct and the system notify the error.
 
-				\item[Consequences]
+				\item[Consequences] There is a new Pomotask in the user Todo Today list.
 
 			\end{description}
 
-		\subsection{PomoTask editing}
+		\subsection{Pomotask editing}
 
 			\begin{description}
 
@@ -138,17 +140,23 @@ This chapter is dedicated to explain the main use cases that can occur when usin
 
 					\begin{itemize}
 
-						\item
+						\item The user choose a Pomotask from its Todo Today list.
+
+						\item He modify the Pomotask info like the name or the estimate.
+
+						\item He confirms the changes. 
+
+						\item The system updates the database with the new Pomotask data.
 
 					\end{itemize}
 
-				\item[Exceptions]
+				\item[Exceptions] The new data are not complete or correct and the system notify the error.
 
-				\item[Consequences]
+				\item[Consequences] The info of the Pomotask are now updated.
 
 			\end{description}
 
-		\subsection{Pomodoro creation}
+		\subsection{Pomotask deletion}
 
 			\begin{description}
 
@@ -160,17 +168,21 @@ This chapter is dedicated to explain the main use cases that can occur when usin
 
 					\begin{itemize}
 
-						\item
+						\item The user choose a Pomotask from its Todo Today list.
+
+						\item He confirm the deletion.
+
+						\item The system delete the Pomotask, leaving the corrispondent Asana task untouched.
 
 					\end{itemize}
 
 				\item[Exceptions]
 
-				\item[Consequences]
+				\item[Consequences] The Pomotask is now deleted from the database.
 
 			\end{description}
 
-		\subsection{Sending report}
+		\subsection{Pomodoro addition}
 
 			\begin{description}
 
@@ -182,12 +194,35 @@ This chapter is dedicated to explain the main use cases that can occur when usin
 
 					\begin{itemize}
 
-						\item
+						\item The user choose a Pomotask from its Todo Today list.
+
+						\item He adds the info of the new Pomodoro, like interruptions or notes.
+
+						\item He confirms the info.
+
+						\item The system updates the database with the new Pomdoro data.
+
+						\item The system adds the Pomodoro to the associated Pomotask.
 
 					\end{itemize}
 
-				\item[Exceptions]
+				\item[Exceptions] The new data are not complete or correct and the system notify the error.
 
-				\item[Consequences]
+				\item[Consequences] The new Pomodoro is now persisted in the database.
 
 			\end{description}
+
+
+	\section{Use Case Diagram}
+
+	Here we group all the use cases in a ``Use Case Diagram'' that helps to understands the dependencies between them.\\
+
+
+		\begin{figure}[h!]
+		  \centering
+		    \centering{%
+		      \includegraphics[width=1\textwidth]{use_case.png}}
+		  \caption{Use Case Diagram}
+		\end{figure}
+
+	
