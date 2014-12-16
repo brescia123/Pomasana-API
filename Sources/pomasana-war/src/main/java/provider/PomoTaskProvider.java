@@ -93,7 +93,8 @@ public class PomoTaskProvider {
     @GET
     @Path("/{id}")
     @Produces("application/json")
-    public Response getPomoTaskPomodori(@Context HttpHeaders hh, @PathParam("id") String idString) {
+    public Response getPomoTaskPomodori(@Context HttpHeaders hh, 
+                                        @PathParam("id") String idString) {
 
         Long id = ParameterValidator.validateId(idString);
 
@@ -261,7 +262,8 @@ public class PomoTaskProvider {
     @DELETE
     @Path("/{id}")
     @Produces("application/json")
-    public Response delete(@Context HttpHeaders hh, @PathParam("id") String idString, @QueryParam("delete_asana") Boolean deleteAsana) {
+    public Response delete(@Context HttpHeaders hh, @PathParam("id") String idString, 
+                            @QueryParam("delete_asana") Boolean deleteAsana) {
 
         Long id = ParameterValidator.validateId(idString);
 
